@@ -5,7 +5,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "CI='' react-app-rewired build",
     "deploy": "gh-pages -d build",
     "format": "npx prettier --write \"src/**/*.js\""
   },
