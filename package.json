@@ -9,6 +9,11 @@
     "deploy": "gh-pages -d build",
     "format": "npx prettier --write \"src/**/*.js\""
   },
+  "eslintConfig": {
+    "rules": {
+      "no-warning-comments": "off"
+    }
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "react": "^18.2.0",
