@@ -7,7 +7,7 @@ export function Pagination({ filters }) {
   const pageClickHandler = (newPage) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setActivePage(newPage);
-
+    //
     const URLWithPage = new URL(apiURL);
     Object.keys(filters).forEach((key) => {
       if (filters[key]) {
@@ -18,7 +18,7 @@ export function Pagination({ filters }) {
     setApiURL(URLWithPage.toString());
   };
 
-  if (info.pages <= 1) return null;
+  if (info.pages < 0) return null;
 
   return (
     <StyledPagination>
